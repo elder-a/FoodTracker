@@ -49,12 +49,19 @@
                                             <constraint firstAttribute="width" constant="147" id="PMU-tC-HVH"/>
                                         </constraints>
                                         <state key="normal" title="Set Defult Label Text "/>
+                                        <connections>
+                                            <action selector="setDefultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNd-hy-eT8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="mealNameLabel" destination="YbG-wz-tP1" id="edh-Mr-Ymu"/>
+                        <outlet property="nameTextField" destination="Qw6-sS-JRy" id="hz9-eD-q85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

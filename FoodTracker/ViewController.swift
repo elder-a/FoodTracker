@@ -8,10 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 //Mark: Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    func textFieldDidEndEditing(textField: UITextField) {
+        mealNameLabel.text = textField.text
+    }
+    
+    
     
     
     override func viewDidLoad() {
@@ -25,13 +36,17 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        nameTextField.delegate = self
         
     }
+    // MARK: UITextFieldDelegate
+    
+    
 
     //Mark: Actions
     @IBAction func setDefultLabelText(_ sender: AnyObject) {
     
-    mealNameLabel.text = "Defult Text"
+    mealNameLabel.text = nameTextField.text
     
     }
     

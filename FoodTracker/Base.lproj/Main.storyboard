@@ -55,8 +55,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-4z-TvL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="kyo-Rk-W47"/>
+                                    <constraint firstAttribute="height" constant="320" id="nfJ-EQ-d5n"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="124" id="Z7b-Mx-beO"/>
+                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lR4-h1-URg"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mealNameLabel" destination="YbG-wz-tP1" id="edh-Mr-Ymu"/>

@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //Mark: Properties
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
@@ -44,6 +45,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
 
     //Mark: Actions
+    
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        
+        
+    }
+    
+    
+    
+    
     @IBAction func setDefultLabelText(_ sender: AnyObject) {
     
     mealNameLabel.text = nameTextField.text

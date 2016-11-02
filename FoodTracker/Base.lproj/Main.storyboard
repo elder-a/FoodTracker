@@ -18,12 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Eoq-PF-Szk">
-                                <frame key="frameInset" minX="36" minY="153" width="249" height="81"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ndj-gU-eE6">
+                                <frame key="frameInset" minY="151" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Eoq-PF-Szk">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbG-wz-tP1">
-                                        <frame key="frameInset" width="87" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbG-wz-tP1">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="9co-T6-OIt"/>
                                             <constraint firstAttribute="width" constant="87" id="kcy-3I-IF4"/>
@@ -32,8 +33,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-sS-JRy">
-                                        <frame key="frameInset" minY="21" width="249" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Meal Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-sS-JRy">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="249" id="8NO-7t-YGW"/>
                                             <constraint firstAttribute="height" constant="30" id="kNp-kV-zqR"/>
@@ -42,8 +42,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-Fk-auU">
-                                        <frame key="frameInset" minY="51" width="147" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-Fk-auU">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="MN5-Iq-rKs"/>
                                             <constraint firstAttribute="width" constant="147" id="PMU-tC-HVH"/>
@@ -54,8 +53,13 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="249" id="egA-V3-jn0"/>
+                                    <constraint firstAttribute="height" constant="81" id="ncF-SF-2iv"/>
+                                </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-4z-TvL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-4z-TvL">
+                                <frame key="frameInset" minY="99" width="320" height="320"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="kyo-Rk-W47"/>
@@ -65,11 +69,16 @@
                                     <outletCollection property="gestureRecognizers" destination="N5i-mX-gl9" appends="YES" id="5Hs-ix-eWm"/>
                                 </connections>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-Uy-8dW" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <frame key="frameInset" minX="40" minY="427" width="240" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="124" id="Z7b-Mx-beO"/>
-                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lR4-h1-URg"/>
+                            <constraint firstItem="Eoq-PF-Szk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-233.5" id="i8C-pD-dxp"/>
+                            <constraint firstItem="Eoq-PF-Szk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zls-Bi-NaZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -85,7 +94,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-11.25" y="144.71830985915494"/>
+            <point key="canvasLocation" x="-86" y="116"/>
         </scene>
     </scenes>
     <resources>

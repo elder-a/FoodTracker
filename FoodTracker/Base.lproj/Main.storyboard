@@ -58,8 +58,7 @@
                                     <constraint firstAttribute="height" constant="81" id="ncF-SF-2iv"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-4z-TvL">
-                                <frame key="frameInset" minY="99" width="320" height="320"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="0g8-4z-TvL">
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="kyo-Rk-W47"/>
@@ -69,15 +68,23 @@
                                     <outletCollection property="gestureRecognizers" destination="N5i-mX-gl9" appends="YES" id="5Hs-ix-eWm"/>
                                 </connections>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-Uy-8dW" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                <frame key="frameInset" minX="40" minY="427" width="240" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-Uy-8dW" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="49I-69-bJx"/>
+                                    <constraint firstAttribute="height" constant="44" id="HEL-cA-ofS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Eoq-PF-Szk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-233.5" id="i8C-pD-dxp"/>
+                            <constraint firstItem="RkI-Uy-8dW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4" id="1k1-ps-6db"/>
+                            <constraint firstItem="RkI-Uy-8dW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="190" id="69K-sr-QZR"/>
+                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AgW-Ye-6s3"/>
+                            <constraint firstItem="RkI-Uy-8dW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="190" id="Ogm-2W-Vqs"/>
+                            <constraint firstItem="Eoq-PF-Szk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-223.5" id="i8C-pD-dxp"/>
+                            <constraint firstItem="0g8-4z-TvL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rQB-K5-PN5"/>
+                            <constraint firstItem="RkI-Uy-8dW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4" id="x7H-LH-Z7g"/>
                             <constraint firstItem="Eoq-PF-Szk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zls-Bi-NaZ"/>
                         </constraints>
                     </view>
@@ -94,7 +101,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-86" y="116"/>
+            <point key="canvasLocation" x="-86" y="129"/>
         </scene>
     </scenes>
     <resources>

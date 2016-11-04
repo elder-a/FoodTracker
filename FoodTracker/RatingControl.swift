@@ -15,18 +15,27 @@ class RatingControl: UIView {
     var rating = 0
     var ratingButtons = [UIButton]()
     
-
-// MARK: Initialization
-
+    
+    // MARK: Initialization
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-       for _ in 0..<5 {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        button.backgroundColor = UIColor.red
-        button.addTarget(self, action: #selector(ratingButtonTapped(button:)), for: .touchDown)
-        ratingButtons += [button]
-        addSubview(button)
+        
+        let filledStarImage = UIImage(named: "filledStar")
+        let emptyStarImage = UIImage(named: "emptyStar")
+        
+        for _ in 0..<5 {
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+            button.setImage(emptyStarImage, for: .normal)
+            button.setImage(filledStarImage, for: .selected)
+            button.setImage(filledStarImage, for: [.highlighted, .selected])
+            button.adjustsImageWhenHighlighted = false
+            
+            
+            button.addTarget(self, action: #selector(ratingButtonTapped(button:)), for: .touchDown)
+            ratingButtons += [button]
+            addSubview(button)
         }
         
     }
@@ -39,7 +48,7 @@ class RatingControl: UIView {
             button.frame = buttonFrame
         }
     }
-
+    
     override public var intrinsicContentSize: CGSize {
         get {
             return CGSize(width: 240, height: 44)

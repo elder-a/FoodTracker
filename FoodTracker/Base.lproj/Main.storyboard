@@ -15,12 +15,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HD8-id-MHq">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HD8-id-MHq" customClass="MealTableViewCell" customModule="FoodTracker" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HD8-id-MHq" id="3zr-vM-ZCk">
                                     <frame key="frameInset" width="320" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-PJ-fBs">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="90" id="cFC-4y-CZV"/>
+                                                <constraint firstAttribute="width" constant="90" id="pxk-75-rBL"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKq-i0-KlN">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Lk-g6-F8z" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                            <frame key="frameInset" minX="98" minY="28" width="240" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pAT-PJ-fBs" firstAttribute="centerX" secondItem="3zr-vM-ZCk" secondAttribute="centerX" constant="-115" id="O9I-mX-jAU"/>
+                                        <constraint firstItem="bKq-i0-KlN" firstAttribute="centerX" secondItem="3zr-vM-ZCk" secondAttribute="centerX" constant="-41" id="tSq-dZ-rgv"/>
+                                        <constraint firstItem="pAT-PJ-fBs" firstAttribute="centerY" secondItem="3zr-vM-ZCk" secondAttribute="centerY" id="tVS-sh-p0U"/>
+                                        <constraint firstItem="bKq-i0-KlN" firstAttribute="centerY" secondItem="3zr-vM-ZCk" secondAttribute="centerY" constant="-34.5" id="trB-sc-NoL"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -32,7 +56,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HOm-7m-7Dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-902" y="129"/>
+            <point key="canvasLocation" x="-903.75" y="128.87323943661971"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

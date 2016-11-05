@@ -42,16 +42,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIA-Fk-auU">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="MN5-Iq-rKs"/>
-                                            <constraint firstAttribute="width" constant="147" id="PMU-tC-HVH"/>
-                                        </constraints>
-                                        <state key="normal" title="Set Defult Label Text "/>
-                                        <connections>
-                                            <action selector="setDefultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNd-hy-eT8"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="249" id="egA-V3-jn0"/>
@@ -66,9 +56,11 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="N5i-mX-gl9" appends="YES" id="5Hs-ix-eWm"/>
+                                    <outletCollection property="gestureRecognizers" destination="N5i-mX-gl9" appends="YES" id="vC5-0r-UHl"/>
                                 </connections>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-Uy-8dW" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkI-Uy-8dW" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <frame key="frameInset" minX="35" minY="452" width="240" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="49I-69-bJx"/>
@@ -92,6 +84,7 @@
                         <outlet property="mealNameLabel" destination="YbG-wz-tP1" id="edh-Mr-Ymu"/>
                         <outlet property="nameTextField" destination="Qw6-sS-JRy" id="hz9-eD-q85"/>
                         <outlet property="photoImageView" destination="0g8-4z-TvL" id="wWN-EY-ccF"/>
+                        <outlet property="ratingControl" destination="RkI-Uy-8dW" id="i6I-lz-dZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

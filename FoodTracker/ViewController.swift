@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBOutlet weak var ratingControl: RatingControl!
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         // Hide the keyboard.
         textField.resignFirstResponder()
@@ -71,6 +73,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         // UIImagePickerController is a view controller that lets a user pick media from their photo library.
         let imagePickerController = UIImagePickerController()
         
+        //assigne image picker to delegate
+        imagePickerController.delegate = self
+        
         // Only allow photos to be picked, not taken.
         imagePickerController.sourceType = .photoLibrary
         
@@ -85,12 +90,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     
     
     
-    @IBAction func setDefultLabelText(_ sender: AnyObject) {
-    
-    mealNameLabel.text = nameTextField.text
-    
-    }
-    
+//    @IBAction func setDefultLabelText(_ sender: AnyObject) {
+//    
+//    mealNameLabel.text = nameTextField.text
+//    
+//    }
+//    
     
 }
 

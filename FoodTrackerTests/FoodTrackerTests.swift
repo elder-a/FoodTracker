@@ -24,6 +24,7 @@ class FoodTrackerTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true, "Pass")
     }
     
     func testPerformanceExample() {
@@ -33,4 +34,21 @@ class FoodTrackerTests: XCTestCase {
         }
     }
     
+    // MARK: FoodTracker Tests
+    
+    func testMealInitialization() {
+        
+        let potentialItem = Meal(name: "Newest meal", photo: nil, rating: 5)
+        XCTAssertNotNil(potentialItem)
+        
+        // Failure cases.
+        let noName = Meal(name: "", photo: nil, rating: 0)
+        XCTAssertNil(noName, "Empty name is invalid")
+        
+        let badRating = Meal(name: "Really bad rating", photo: nil, rating: -1)
+       XCTAssertNil(badRating, "Negative ratings are invalid, be positive")
+        
+    }
+    
 }
+ 
